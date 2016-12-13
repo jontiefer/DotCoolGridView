@@ -1,0 +1,549 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>DotCoolControls.Tools</name>
+    </assembly>
+    <members>
+        <member name="T:DotCoolControls.Tools.CoolDraw">
+            <summary>
+            The CoolDraw class will handle a wide variety of GDI+/Painting and Drawing operations, including various image, text, cropping and gradient 
+            manipulation drawing and rendering in the various DotCool controls.  In addition to function as a toolkit for various drawing and rendering 
+            operations, the class will contain many calculation, informational and utility type of functions that relate to graphics, texts and images of the 
+            DotCool controls.
+            </summary>
+        </member>
+        <member name="M:DotCoolControls.Tools.CoolDraw.DrawShape(Tiferix.Global.CoolShape,System.Drawing.Graphics,System.Drawing.Rectangle,System.Drawing.Color,System.Int32,System.Single,System.Single,System.Nullable{System.Drawing.Color})">
+            <summary>
+            Draws the appropriate shape according to the type of shape and border specified in the function's parameters.  In addition to 
+            drawing the shape, the shape can be filled in with a solid color specified in the FillColor parameter of the function.  
+            </summary>
+            <param name="shape"></param>
+            <param name="graphics"></param>
+            <param name="rectBounds"></param>
+            <param name="BorderColor"></param>
+            <param name="iBorderWidth"></param>
+            <param name="fXRadius"></param>
+            <param name="fYRadius"></param>
+            <param name="FillColor"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DotCoolControls.Tools.CoolDraw.DrawRectangle(System.Drawing.Graphics,System.Drawing.Rectangle,System.Drawing.Color,System.Int32,System.Nullable{System.Drawing.Color},System.Boolean)">
+            <summary>
+            Draws a rectangle shape graphic with the border (and optionally fill color) specified in the function's parameters.
+            </summary>
+            <param name="graphics"></param>
+            <param name="rectBounds"></param>
+            <param name="BorderColor"></param>
+            <param name="iBorderWidth"></param>
+            <param name="FillColor"></param>
+            <param name="blDrawSquare"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DotCoolControls.Tools.CoolDraw.DrawSquare(System.Drawing.Graphics,System.Drawing.Rectangle,System.Drawing.Color,System.Int32,System.Nullable{System.Drawing.Color})">
+            <summary>
+            Draws a square shape graphic with the border (and optionally fill color) specified in the function's parameters.
+            </summary>
+            <param name="graphics"></param>
+            <param name="rectBounds"></param>
+            <param name="BorderColor"></param>
+            <param name="iBorderWidth"></param>
+            <param name="FillColor"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DotCoolControls.Tools.CoolDraw.DrawEllipse(System.Drawing.Graphics,System.Drawing.Rectangle,System.Drawing.Color,System.Int32,System.Nullable{System.Drawing.Color},System.Boolean)">
+            <summary>
+            Draws an ellipse shape graphic with the border (and optionally fill color) specified in the function's parameters.
+            </summary>
+            <param name="graphics"></param>
+            <param name="rectBounds"></param>
+            <param name="BorderColor"></param>
+            <param name="iBorderWidth"></param>
+            <param name="FillColor"></param>
+            <param name="blDrawCircle"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DotCoolControls.Tools.CoolDraw.DrawCircle(System.Drawing.Graphics,System.Drawing.Rectangle,System.Drawing.Color,System.Int32,System.Nullable{System.Drawing.Color})">
+            <summary>
+            Draws a circle shape graphic with the border (and optionally fill color) specified in the function's parameters.
+            </summary>
+            <param name="graphics"></param>
+            <param name="rectBounds"></param>
+            <param name="BorderColor"></param>
+            <param name="iBorderWidth"></param>
+            <param name="FillColor"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DotCoolControls.Tools.CoolDraw.DrawPolyShape(Tiferix.Global.CoolShape,System.Drawing.Graphics,System.Drawing.Rectangle,System.Drawing.Color,System.Int32,System.Nullable{System.Drawing.Color})">
+            <summary>
+            Draws a specific polygon-shaped graphic with the border (and optionally fill color) specified in the function's parameters.  The type of polygon 
+            shape graphic that is drawn depends on the shape specified in the polyShape parameter of the function.
+            </summary>
+            <param name="polyShape"></param>
+            <param name="graphics"></param>
+            <param name="rectBounds"></param>
+            <param name="BorderColor"></param>
+            <param name="iBorderWidth"></param>
+            <param name="FillColor"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DotCoolControls.Tools.CoolDraw.DrawRoundedRectangle(System.Drawing.Graphics,System.Drawing.Rectangle,System.Single,System.Single,System.Drawing.Color,System.Int32,System.Nullable{System.Drawing.Color},System.Boolean)">
+            <summary>
+            Draws a rounded rectangle shape graphic with the border and corner radius (and optionally fill color) specified in the function's parameters.
+            </summary>
+            <param name="graphics"></param>
+            <param name="rectBounds"></param>
+            <param name="fXRadius"></param>
+            <param name="fYRadius"></param>
+            <param name="BorderColor"></param>
+            <param name="iBorderWidth"></param>
+            <param name="FillColor"></param>
+            <param name="blDrawSquare"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DotCoolControls.Tools.CoolDraw.DrawRoundedSquare(System.Drawing.Graphics,System.Drawing.Rectangle,System.Single,System.Single,System.Drawing.Color,System.Int32,System.Nullable{System.Drawing.Color})">
+            <summary>
+            Draws a rounded square shape graphic with the border and corner radius (and optionally fill color) specified in the function's parameter.
+            </summary>
+            <param name="graphics"></param>
+            <param name="rectBounds"></param>
+            <param name="fXRadius"></param>
+            <param name="fYRadius"></param>
+            <param name="BorderColor"></param>
+            <param name="iBorderWidth"></param>
+            <param name="FillColor"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DotCoolControls.Tools.CoolDraw.DrawGradientShape(Tiferix.Global.CoolShape,DotCoolControls.Tools.CoolGradientType,System.Drawing.Graphics,System.Drawing.Color,System.Drawing.Color,System.Drawing.Rectangle,System.Drawing.Color,System.Int32,System.Single,System.Int32,System.Int32,System.Single,System.Single)">
+            <summary>
+            Draws the appropriate gradient filled shape according to the type of shape, gradient and border specified in the function's parameters.  
+            </summary>
+            <param name="shape"></param>
+            <param name="gradType"></param>
+            <param name="graphics"></param>
+            <param name="gradColor1"></param>
+            <param name="gradColor2"></param>
+            <param name="rectBounds"></param>
+            <param name="BorderColor"></param>
+            <param name="iBorderWidth"></param>
+            <param name="fGradientSpan"></param>
+            <param name="iGradOffsetX"></param>
+            <param name="iGradOffsetY"></param>
+            <param name="fXRadius"></param>
+            <param name="fYRadius"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DotCoolControls.Tools.CoolDraw.DrawGradientRectangle(DotCoolControls.Tools.CoolGradientType,System.Drawing.Graphics,System.Drawing.Color,System.Drawing.Color,System.Drawing.Rectangle,System.Drawing.Color,System.Int32,System.Single,System.Int32,System.Int32,System.Boolean)">
+            <summary>
+            Draws a gradient filled rectangle shape graphic with the border and gradient specified in the function's parameters.
+            </summary>
+            <param name="gradType"></param>
+            <param name="graphics"></param>
+            <param name="gradColor1"></param>
+            <param name="gradColor2"></param>
+            <param name="rectBounds"></param>
+            <param name="BorderColor"></param>
+            <param name="iBorderWidth"></param>
+            <param name="fGradientSpan"></param>
+            <param name="iOffsetX"></param>
+            <param name="iOffsetY"></param>
+            <param name="blDrawSquare"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DotCoolControls.Tools.CoolDraw.DrawGradientSquare(DotCoolControls.Tools.CoolGradientType,System.Drawing.Graphics,System.Drawing.Color,System.Drawing.Color,System.Drawing.Rectangle,System.Drawing.Color,System.Int32,System.Single,System.Int32,System.Int32)">
+            <summary>
+            Draws a gradient filled square shape graphic with the border and gradient specified in the function's parameters.
+            </summary>
+            <param name="gradType"></param>
+            <param name="graphics"></param>
+            <param name="gradColor1"></param>
+            <param name="gradColor2"></param>
+            <param name="rectBounds"></param>
+            <param name="BorderColor"></param>
+            <param name="iBorderWidth"></param>
+            <param name="fGradientSpan"></param>
+            <param name="iOffsetX"></param>
+            <param name="iOffsetY"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DotCoolControls.Tools.CoolDraw.DrawGradientEllipse(DotCoolControls.Tools.CoolGradientType,System.Drawing.Graphics,System.Drawing.Color,System.Drawing.Color,System.Drawing.Rectangle,System.Drawing.Color,System.Int32,System.Single,System.Int32,System.Int32,System.Boolean)">
+            <summary>
+            Draws a gradient filled ellipse shape graphic with the border and gradient specified in the function's parameters.
+            </summary>
+            <param name="gradType"></param>
+            <param name="graphics"></param>
+            <param name="gradColor1"></param>
+            <param name="gradColor2"></param>
+            <param name="rectBounds"></param>
+            <param name="BorderColor"></param>
+            <param name="iBorderWidth"></param>
+            <param name="fGradientSpan"></param>
+            <param name="iOffsetX"></param>
+            <param name="iOffsetY"></param>
+            <param name="blDrawCircle"></param>
+        </member>
+        <member name="M:DotCoolControls.Tools.CoolDraw.DrawGradientCircle(DotCoolControls.Tools.CoolGradientType,System.Drawing.Graphics,System.Drawing.Color,System.Drawing.Color,System.Drawing.Rectangle,System.Drawing.Color,System.Int32,System.Single,System.Int32,System.Int32)">
+            <summary>
+            Draws a gradient filled circle shape graphic with the border and gradient specified in the function's parameters.
+            </summary>
+            <param name="gradType"></param>
+            <param name="graphics"></param>
+            <param name="gradColor1"></param>
+            <param name="gradColor2"></param>
+            <param name="rectBounds"></param>
+            <param name="BorderColor"></param>
+            <param name="iBorderWidth"></param>
+            <param name="fGradientSpan"></param>
+            <param name="iOffsetX"></param>
+            <param name="iOffsetY"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DotCoolControls.Tools.CoolDraw.DrawGradientPolyShape(Tiferix.Global.CoolShape,DotCoolControls.Tools.CoolGradientType,System.Drawing.Graphics,System.Drawing.Color,System.Drawing.Color,System.Drawing.Rectangle,System.Drawing.Color,System.Int32,System.Single,System.Int32,System.Int32)">
+            <summary>
+            Draws a gradient filled polygon shape graphic with the border and gradient specified in the function's parameters.  The type of polygon 
+            shape graphic that is drawn depends on the shape specified in the polyShape parameter of the function.
+            </summary>
+            <param name="polyShape"></param>
+            <param name="gradType"></param>
+            <param name="graphics"></param>
+            <param name="gradColor1"></param>
+            <param name="gradColor2"></param>
+            <param name="rectBounds"></param>
+            <param name="BorderColor"></param>
+            <param name="iBorderWidth"></param>
+            <param name="fGradientSpan"></param>
+            <param name="iOffsetX"></param>
+            <param name="iOffsetY"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DotCoolControls.Tools.CoolDraw.DrawGradientRoundedRectangle(DotCoolControls.Tools.CoolGradientType,System.Drawing.Graphics,System.Drawing.Color,System.Drawing.Color,System.Drawing.Rectangle,System.Single,System.Single,System.Drawing.Color,System.Int32,System.Single,System.Int32,System.Int32,System.Boolean)">
+            <summary>
+            Draws a gradient filled rounded rectangle shape graphic with the border, corner radius and gradient specified in the function's parameters.
+            </summary>
+            <param name="gradType"></param>
+            <param name="graphics"></param>
+            <param name="gradColor1"></param>
+            <param name="gradColor2"></param>
+            <param name="rectBounds"></param>
+            <param name="fXRadius"></param>
+            <param name="fYRadius"></param>
+            <param name="BorderColor"></param>
+            <param name="iBorderWidth"></param>
+            <param name="fGradientSpan"></param>
+            <param name="iOffsetX"></param>
+            <param name="iOffsetY"></param>
+            <param name="blDrawSquare"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DotCoolControls.Tools.CoolDraw.DrawGradientRoundedSquare(DotCoolControls.Tools.CoolGradientType,System.Drawing.Graphics,System.Drawing.Color,System.Drawing.Color,System.Drawing.Rectangle,System.Single,System.Single,System.Drawing.Color,System.Int32,System.Single,System.Int32,System.Int32)">
+            <summary>
+            Draws a gradient filled rounded square shape graphic with the border, corner radius and gradient specified in the function's parameters.
+            </summary>
+            <param name="gradType"></param>
+            <param name="graphics"></param>
+            <param name="gradColor1"></param>
+            <param name="gradColor2"></param>
+            <param name="rectBounds"></param>
+            <param name="fXRadius"></param>
+            <param name="fYRadius"></param>
+            <param name="BorderColor"></param>
+            <param name="iBorderWidth"></param>
+            <param name="fGradientSpan"></param>
+            <param name="iOffsetX"></param>
+            <param name="iOffsetY"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DotCoolControls.Tools.CoolDraw.CropEllipse(System.Drawing.Bitmap,System.Drawing.Rectangle,System.Boolean)">
+            <summary>
+            Crops the bitmap passed to the image into an ellipse shape that will fit within the bounds specified in the function's parameter.  The 
+            cropped image will be returned as a new bitmap image.
+            </summary>
+            <param name="bmpSrc"></param>
+            <param name="rectBounds"></param>
+            <param name="blCropCircle"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DotCoolControls.Tools.CoolDraw.CropCircle(System.Drawing.Bitmap,System.Drawing.Rectangle)">
+            <summary>
+            Crops the bitmap passed to the image into a circle shape that will fit within the bounds specified in the function's parameter.  The 
+            cropped image will be returned as a new bitmap image.
+            </summary>
+            <param name="bmpSrc"></param>
+            <param name="rectBounds"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DotCoolControls.Tools.CoolDraw.CropPolyShape(Tiferix.Global.CoolShape,System.Drawing.Bitmap,System.Drawing.Rectangle)">
+            <summary>
+            Crops the bitmap passed to the image into a polygon shape based that will fit within the bounds specified in the function's parameter.
+            Which polygon shape will be cropped will be determined by the shape passed to the polyShape parameter of the function.  The cropped 
+            image will be returned as a new bitmap image.
+            </summary>
+            <param name="polyShape"></param>
+            <param name="bmpSrc"></param>
+            <param name="rectBounds"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DotCoolControls.Tools.CoolDraw.CropRoundedRect(System.Drawing.Bitmap,System.Drawing.Rectangle,System.Single,System.Single,System.Boolean)">
+            <summary>
+            Crops the bitmap passed to the image into a rounded rectangle shape that will fit within the bounds specified in the function's parameter.  The 
+            cropped image will be returned as a new bitmap image.
+            </summary>
+            <param name="bmpSrc"></param>
+            <param name="rectBounds"></param>
+            <param name="fXRadius"></param>
+            <param name="fYRadius"></param>
+            <param name="blCropSquare"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DotCoolControls.Tools.CoolDraw.CropRoundedSquare(System.Drawing.Bitmap,System.Drawing.Rectangle,System.Single,System.Single)">
+            <summary>
+            Crops the bitmap passed to the image into a rounded square shape that will fit within the bounds specified in the function's parameter.  The 
+            cropped image will be returned as a new bitmap image.
+            </summary>
+            <param name="bmpSrc"></param>
+            <param name="rectBounds"></param>
+            <param name="fXRadius"></param>
+            <param name="fYRadius"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DotCoolControls.Tools.CoolDraw.DrawText(System.String,System.Drawing.Graphics,System.Drawing.Point,System.Drawing.Size,System.Drawing.Font,System.Drawing.Color,System.Drawing.ContentAlignment,System.Boolean,System.Boolean)">
+            <summary>
+            Draws the text specified in the function's Text parameter using the various text-related settings passed to the parameters of the function.  
+            The text will be drawn and rendered onto the graphics object passed to the function.  Optionally, the text can be drawn with a focus rectangle 
+            around it if the DrawFocusRect parameter is set to true.
+            </summary>
+            <param name="strText"></param>
+            <param name="graphics"></param>
+            <param name="ptTextOffset"></param>
+            <param name="szCanvas"></param>
+            <param name="font"></param>
+            <param name="ForeColor"></param>
+            <param name="align"></param>
+            <param name="blDrawFocusRect"></param>
+            <param name="blWordBreak"></param>
+        </member>
+        <member name="M:DotCoolControls.Tools.CoolDraw.GetTextFormatFlagAlign(System.Drawing.ContentAlignment)">
+            <summary>
+            Gets the TextFormatFlags that can be used for rendering text using GDI operations based on the ContentAlignment enumeration value 
+            passed to the function.
+            </summary>
+            <param name="align"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DotCoolControls.Tools.CoolDraw.GetTextRectangle(System.String,System.Drawing.Graphics,System.Drawing.Rectangle,System.Drawing.Font,System.Drawing.ContentAlignment)">
+            <summary>
+            Calculates and returns a rectangle that surrounds the entire region of the displayed text with all formatting settings specified in the function's 
+            parameters.
+            </summary>
+            <param name="strText"></param>
+            <param name="graphics"></param>
+            <param name="rectBounds"></param>
+            <param name="font"></param>
+            <param name="align"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DotCoolControls.Tools.CoolDraw.DrawImage(System.Drawing.Image,System.Drawing.Graphics,System.Drawing.Rectangle,System.Drawing.ContentAlignment,System.Drawing.Point,System.Boolean,System.Nullable{System.Drawing.Color},System.Boolean,Tiferix.Global.CoolImageSizeMode)">
+            <summary>
+            Draws the image onto the graphics object specified in the function's parameter using the various image related settings passed into the 
+            function's parameters.  If the image is set to Normal size mode, then the various alignment and offset positions can be used to position 
+            the image around the control.  With other size modes, many of the additional imaging positioning parameters are not used and the image 
+            will be sized according to the size of the control and image.  Optionally, a focus rectangle can be drawn around the image if the DrawFocusRect 
+            parameter is set to true.
+            </summary>
+            <param name="image"></param>
+            <param name="graphics"></param>
+            <param name="rectBounds"></param>
+            <param name="align"></param>
+            <param name="ptImageOffset"></param>
+            <param name="blTransparent"></param>
+            <param name="TransColor"></param>
+            <param name="blDrawFocusRect"></param>
+            <param name="SizeMode"></param>
+        </member>
+        <member name="M:DotCoolControls.Tools.CoolDraw.DrawImage(System.Drawing.Image,System.Drawing.Graphics,System.Drawing.Rectangle,Tiferix.Global.CoolImageSizeMode,System.Boolean,System.Nullable{System.Drawing.Color},System.Boolean)">
+            <summary>
+            Draws the image onto the graphics object specified in the function's parameter using the various image related settings passed into the 
+            function's parameters.  If the image is set to Normal size mode, then the various alignment and offset positions can be used to position 
+            the image around the control.  With other size modes, many of the additional imaging positioning parameters are not used and the image 
+            will be sized according to the size of the control and image.  Optionally, a focus rectangle can be drawn around the image if the DrawFocusRect 
+            parameter is set to true.
+            </summary>
+            <param name="image"></param>
+            <param name="graphics"></param>
+            <param name="rectBounds"></param>
+            <param name="SizeMode"></param>
+            <param name="blTransparent"></param>
+            <param name="TransColor"></param>
+            <param name="blDrawFocusRect"></param>
+        </member>
+        <member name="M:DotCoolControls.Tools.CoolDraw.GetImageRectangle(System.Drawing.Image,System.Drawing.Rectangle,System.Drawing.ContentAlignment,System.Drawing.Point)">
+            <summary>
+            Calculates and returns a rectangle that surrounds the entire region of the image with all positioning settings specified in the function's 
+            parameters.  In the case, the image is sized to fit across the control, such as being stretched or sized to fit, then the image rectangle will be
+            calculated to the size of where the image will be displayed based on the size of the control and image.
+            </summary>
+            <param name="image"></param>
+            <param name="rectBounds"></param>
+            <param name="align"></param>
+            <param name="ptImageOffset"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DotCoolControls.Tools.CoolDraw.GetImageRectangle(System.Drawing.Image,System.Drawing.Rectangle,Tiferix.Global.CoolImageSizeMode)">
+            <summary>
+            Calculates and returns a rectangle that surrounds the entire region of the image with all positioning settings specified in the function's 
+            parameters.  In the case, the image is sized to fit across the control, such as being stretched or sized to fit, then the image rectangle will be
+            calculated to the size of where the image will be displayed based on the size of the control and image.
+            </summary>
+            <param name="image"></param>
+            <param name="rectBounds"></param>
+            <param name="SizeMode"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DotCoolControls.Tools.CoolDraw.SizeToFitImage(System.Drawing.Image,System.Drawing.Rectangle)">
+            <summary>
+            Proportionally resizes the image to fit within the bounds specified in the function.  
+            </summary>
+            <param name="rectBounds"></param>
+            <param name="image"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DotCoolControls.Tools.CoolDraw.CalculateSquareRect(System.Drawing.Rectangle)">
+            <summary>
+            Calculates and returns a square rectangle based on the dimensions of the rectangle passed to the function.  The square rectangle will be 
+            calculated based on the smaller of the two dimensions of the rectangle passed to the function.  The smaller dimension will be set for both 
+            sides of the square rectangle, which will then be returned by the function.
+            </summary>
+            <param name="rectBounds"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DotCoolControls.Tools.CoolDraw.GetPolyShapePoints(Tiferix.Global.CoolShape,System.Drawing.Rectangle,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="polyShape"></param>
+            <param name="rectBounds"></param>
+            <param name="iBorderWidth"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DotCoolControls.Tools.CoolDraw.GetRoundedRectPath(System.Drawing.Rectangle,System.Single,System.Single,System.Int32)">
+            <summary>
+            Calculates and generates a gradient path that is used to draw a rounded rectangle based on the parameters that are passed to the function.  
+            The gradient path containing all the points quired to draw the rounded rectangle will be returned by the function after the path is constructed. 
+            </summary>
+            <param name="rectBounds"></param>
+            <param name="fXRadius"></param>
+            <param name="fYRadius"></param>
+            <param name="iBorderWidth"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DotCoolControls.Tools.CoolDraw.ContainsPoint(System.Drawing.PointF[],System.Drawing.PointF)">
+            <summary>
+            The function checks to see if the point passed in the point parameter is contained within the array of points specified in the aryPolygon 
+            parameter.  If the array of points contained the specified point specified, then the function will return true, else it returns false.
+            NOTE: The current implementation of this function performs a loop on the array which delays the appropriate mouse effects of the 
+            DotCoolControls from being displayed when the mouse interacts with the control.  In future versions a hash table will be generated 
+            with the array points of the control for quicker checks of the region boundaries of the control.
+            </summary>
+            <param name="aryPolygon"></param>
+            <param name="point"></param>
+            <returns></returns>
+        </member>
+        <member name="T:DotCoolControls.Tools.CoolGradientType">
+            <summary>
+            Style/Pattern of gradient to use in the various set of DotCool controls.
+            </summary>
+        </member>
+        <member name="M:DotCoolControls.Tools.CoolGradient.DrawGradient(DotCoolControls.Tools.CoolGradientType,System.Drawing.Graphics,System.Drawing.Color,System.Drawing.Color,System.Drawing.Rectangle,System.Single,System.Int32,System.Int32)">
+            <summary>
+            Draws the appropriate style of gradient based on gradient type flag specified in the function parameter.                  
+            </summary>
+            <param name="gradType"></param>
+            <param name="graphics"></param>
+            <param name="gradColor1"></param>
+            <param name="gradColor2"></param>
+            <param name="rectBounds"></param>
+            <param name="fGradientSpan"></param>
+            <param name="iOffsetX"></param>
+            <param name="iOffsetY"></param>
+        </member>
+        <member name="M:DotCoolControls.Tools.CoolGradient.DrawLinearGradient(System.Drawing.Graphics,System.Drawing.Color,System.Drawing.Color,System.Drawing.Rectangle,System.Drawing.Drawing2D.LinearGradientMode,System.Single,System.Int32,System.Int32)">
+            <summary>
+            Draws a linear style of gradient in the specified region passed to the function.  The linear gradient will be drawn using the
+            starting and ending colors and linear gradient style specified in the function's parameters.
+            </summary>
+            <param name="graphics"></param>
+            <param name="gradColor1"></param>
+            <param name="gradColor2"></param>
+            <param name="rectBounds"></param>
+            <param name="mode"></param>
+            <param name="fGradientSpan"></param>
+            <param name="iOffsetX"></param>
+            <param name="iOffsetY"></param>
+        </member>
+        <member name="M:DotCoolControls.Tools.CoolGradient.DrawEllipsisGradient(System.Drawing.Graphics,System.Drawing.Color,System.Drawing.Color,System.Drawing.Rectangle,System.Single,System.Int32,System.Int32,System.Boolean)">
+            <summary>
+            Draws an elliptical style of gradient in the specified region passed to the function.  The ellipitical gradient will be drawn using the
+            starting and ending colors specified in the function's parameters.
+            </summary>
+            <param name="graphics"></param>
+            <param name="gradColor1"></param>
+            <param name="gradColor2"></param>
+            <param name="rectBounds"></param>
+            <param name="fGradientSpan"></param>
+            <param name="iOffsetX"></param>
+            <param name="iOffsetY"></param>
+            <param name="blDrawCircle"></param>
+        </member>
+        <member name="M:DotCoolControls.Tools.CoolGradient.DrawCircleGradient(System.Drawing.Graphics,System.Drawing.Color,System.Drawing.Color,System.Drawing.Rectangle,System.Single,System.Int32,System.Int32)">
+            <summary>
+            Draws a symmetrical circle style of gradient in the specified region passed to the function.  The circular gradient will be drawn using the
+            starting and ending colors specified in the function's parameters. 
+            </summary>
+            <param name="graphics"></param>
+            <param name="gradColor1"></param>
+            <param name="gradColor2"></param>
+            <param name="rectBounds"></param>
+            <param name="fGradientSpan"></param>
+            <param name="iOffsetX"></param>
+            <param name="iOffsetY"></param>
+        </member>
+        <member name="M:DotCoolControls.Tools.CoolGradient.DrawPolyGradient(System.Drawing.Graphics,System.Drawing.Color,System.Drawing.Color,System.Drawing.Rectangle,System.Int32,System.Single,System.Int32,System.Int32)">
+            <summary>
+            Draws a polygon gradient that uses an array of points in the specified region passed to the function.  The number of points used 
+            to draw the polygon gradient will be determined by the Points parameter.  A distribution of colors will be calculated based on the 
+            number of points and the starting and ending colors specified in the function's parameters to produce the appropriate gradient 
+            effect.  
+            NOTE: As of now, only 4 and 10 point polygon gradients are supported.
+            </summary>
+            <param name="graphics"></param>
+            <param name="gradColor1"></param>
+            <param name="gradColor2"></param>
+            <param name="rectBounds"></param>
+            <param name="iPoints">Indicates how many points will be used for drawing the polygon gradient.  The following values are 
+            allowed: 4 and 10.</param>
+            <param name="fGradientSpan"></param>
+            <param name="iOffsetX"></param>
+            <param name="iOffsetY"></param>
+        </member>
+        <member name="M:DotCoolControls.Tools.CoolGradient.DrawTriangleGradient(System.Drawing.Graphics,System.Drawing.Color,System.Drawing.Color,System.Drawing.Rectangle,System.Single,System.Int32,System.Int32)">
+            <summary>
+            Draws a triangular style of gradient in the specified region passed to the function.  The triangular gradient will be drawn using the
+            starting and ending colors specified in the function's parameters.
+            </summary>
+            <param name="graphics"></param>
+            <param name="gradColor1"></param>
+            <param name="gradColor2"></param>
+            <param name="rectBounds"></param>
+            <param name="fGradientSpan"></param>
+            <param name="iOffsetX"></param>
+            <param name="iOffsetY"></param>
+        </member>
+        <member name="M:DotCoolControls.Tools.CoolGradient.GetDefaultGradientSpan(DotCoolControls.Tools.CoolGradientType)">
+            <summary>
+            Retrieves the default gradient span setting for the gradient type specified in the function's parameter.  Each various gradient type will have 
+            a default gradient span that will be considered the optimal size for displaying the specific type of gradient.
+            </summary>
+            <param name="gradType"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

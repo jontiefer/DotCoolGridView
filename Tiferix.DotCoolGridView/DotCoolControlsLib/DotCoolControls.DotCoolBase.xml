@@ -1,0 +1,1375 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>DotCoolControls.DotCoolBase</name>
+    </assembly>
+    <members>
+        <member name="T:DotCoolControls.DotCoolCtlSettingsList`1">
+            <summary>
+            A list of a set of all control visual settings that are linked to a DotCoolControl.  The DotCoolCtlSettingsList will be used in a DotCoolControl 
+            class to give the user access to the set of state-specific visual setting properties that can be organized by the various control states.  Accessing 
+            the visual setting properties through the ControlSettingsList classes will allow the visual settings to be organized by the various control states 
+            for easier management of the various visual settings that can be associated with the control.
+            </summary>
+            <typeparam name="TSetting">Type of visual setting associated with the control setting list.</typeparam>
+        </member>
+        <member name="E:DotCoolControls.DotCoolCtlSettingsList`1.SettingChanged">
+            <summary>
+            The SettingChanged event will be raised any time a setting in the class is modified.
+            </summary>
+        </member>
+        <member name="F:DotCoolControls.DotCoolCtlSettingsList`1.m_ctlDotCool">
+            <summary>
+            Contains a reference to the DotCoolControl associated with the visual settings accessed through the DotCoolCtlSettings class.
+            </summary>
+        </member>
+        <member name="F:DotCoolControls.DotCoolCtlSettingsList`1.m_VisSettings">
+            <summary>
+            Contains the various settings of the DotCoolControl class.
+            </summary>
+        </member>
+        <member name="F:DotCoolControls.DotCoolCtlSettingsList`1.m_CtlSettings">
+            <summary>
+            Contains the set of properties that will access and modify the visual settings associated with the DotCoolControl class that are linked to the 
+            DotCoolControls list.
+            </summary>
+        </member>
+        <member name="M:DotCoolControls.DotCoolCtlSettingsList`1.#ctor(System.Windows.Forms.Control,DotCoolControls.VisualSettings.VisualSettingProperties{`0})">
+            <summary>
+            Constructor
+            </summary>
+            <param name="control"></param>
+            <param name="VisSettings"></param>
+        </member>
+        <member name="P:DotCoolControls.DotCoolCtlSettingsList`1.RefreshOnChange">
+            <summary>
+            Indicates if the linked DotCool control will be refreshed any time a setting is changed in the class.
+            </summary>
+        </member>
+        <member name="M:DotCoolControls.DotCoolCtlSettingsList`1.GetVisualSetting(DotCoolControls.VisualSettings.VisualSettingEnum)">
+            <summary>
+            Gets the visual setting properties of the type of visual setting linked to the class for the state/scenario specified in the function's setting
+            parameter.
+            </summary>
+            <param name="setting"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DotCoolControls.DotCoolCtlSettingsList`1.GetControlSetting(DotCoolControls.VisualSettings.VisualSettingEnum)">
+            <summary>
+            Gets the control setting properties of the type of setting linked to the class for the state/scenario specified in the function's setting
+            parameter.
+            </summary>
+            <param name="setting"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DotCoolControls.DotCoolCtlSettingsList`1.OnSettingChanged(DotCoolControls.VisualSettings.VisualSettingEnum,System.String,System.Object)">
+            <summary>
+            Raises the SettingChanged event.
+            </summary>
+            <param name="settingIndex"></param>
+            <param name="strSettingName"></param>
+            <param name="value"></param>
+        </member>
+        <member name="T:DotCoolControls.DotCoolCtlSettings`1">
+            <summary>
+            Contains the control visual setting propeties for a specific control state associated with a DotCoolControl.  Each control visual setting property set 
+            will be contained in a DotCoolCtlSettingsList class where it can be accessed through its associated control state.
+            </summary>
+            <typeparam name="TSetting">Type of visual setting associated with the control settings list the control setting is contained.</typeparam>
+        </member>
+        <member name="F:DotCoolControls.DotCoolCtlSettings`1.m_ctlDotCool">
+            <summary>
+            Contains a reference to the DotCoolControl associated with the specific visual settings class.
+            </summary>
+        </member>
+        <member name="P:DotCoolControls.DotCoolCtlSettings`1.SettingType">
+            <summary>
+            Indicates which type of visual setting will be associated with the VisualSettingProperties data object linked to the class.  
+            A setting will be stored for each state/scenario that can be used for any DotCoolControl.  All properties associated with the visual
+            settings item will be linked to this specified state/scenario.
+            </summary>
+        </member>
+        <member name="M:DotCoolControls.DotCoolCtlSettings`1.#ctor(DotCoolControls.DotCoolCtlSettingsList{`0},DotCoolControls.VisualSettings.VisualSettingEnum,System.Windows.Forms.Control)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="CtlSettingsList"></param>
+            <param name="setting"></param>
+            <param name="control"></param>
+        </member>
+        <member name="P:DotCoolControls.DotCoolCtlSettings`1.RefreshOnChange">
+            <summary>
+            Indicates if the linked DotCool control will be refreshed any time a setting is changed in the class.
+            </summary>
+        </member>
+        <member name="M:DotCoolControls.DotCoolCtlSettings`1.OnSettingChanged(DotCoolControls.VisualSettings.VisualSettingEnum,System.String,System.Object)">
+            <summary>
+            Raises the SettingChanged event of the DotCoolCtlSettingsList class.
+            </summary>
+            <param name="settingIndex"></param>
+            <param name="strSettingName"></param>
+            <param name="value"></param>
+        </member>
+        <member name="T:DotCoolControls.DotCoolCtlGradientSettingsList">
+            <summary>
+            A list of a set of all gradient related control visual settings that are linked to a DotCoolControl.  The DotCoolCtlGradientSettingsList will be used
+            in a DotCoolControl class to give the user access to the set of state-specific gradient visual setting properties that can be organized by the 
+            various control states.  Accessing the gradient visual setting properties through the GradientSettingsList classes will allow the gradient visual
+            settings to be organized by the various control states for easier management of the various gradient visual settings that can be associated with the 
+            control.
+            </summary>
+        </member>
+        <member name="M:DotCoolControls.DotCoolCtlGradientSettingsList.#ctor(System.Windows.Forms.Control,System.Boolean,DotCoolControls.VisualSettings.VisualSettingProperties{DotCoolControls.VisualSettings.GradientVisualSettings})">
+            <summary>
+            Constructor
+            </summary>
+            <param name="control"></param>
+            <param name="blRefreshOnChange"></param>
+            <param name="VisSettings"></param>
+        </member>
+        <member name="P:DotCoolControls.DotCoolCtlGradientSettingsList.Item(DotCoolControls.VisualSettings.VisualSettingEnum)">
+            <summary>
+            Gets the visual setting properties of the type of visual setting linked to the class for the state/scenario specified in the function's setting
+            parameter.
+            </summary>
+            <param name="setting"></param>
+            <returns></returns>        
+        </member>
+        <member name="T:DotCoolControls.DotCoolCtlGradientSettings">
+            <summary>
+            Contains the control gradient visual setting propeties for a specific control state associated with a DotCoolControl.  Each control gradient visual 
+            setting property set will be contained in a DotCoolCtlGradientSettingsList class where it can be accessed through its associated control state.
+            </summary>
+        </member>
+        <member name="M:DotCoolControls.DotCoolCtlGradientSettings.#ctor(DotCoolControls.DotCoolCtlGradientSettingsList,DotCoolControls.VisualSettings.VisualSettingEnum,System.Windows.Forms.Control)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="GradSettingsList"></param>
+            <param name="setting"></param>
+            <param name="control"></param>
+        </member>
+        <member name="M:DotCoolControls.DotCoolCtlGradientSettings.ToString">
+            <summary>
+            Overrides the ToString function which will allow an appropriate caption to be displayed in the property grid for the specific type of control 
+            visual setting.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:DotCoolControls.DotCoolCtlGradientSettings.GradientColor1">
+            <summary>
+            The starting color in the gradient path to be used for drawing the gradient image of the control.
+            </summary>        
+        </member>
+        <member name="P:DotCoolControls.DotCoolCtlGradientSettings.GradientColor2">
+            <summary>
+            The ending color in the gradient path to be used for drawing the gradient image of the control.
+            </summary>
+        </member>
+        <member name="P:DotCoolControls.DotCoolCtlGradientSettings.GradientType">
+            <summary>
+            Indicates the style/pattern to be used for drawing the DotCoolControl's gradient image.
+            </summary>
+        </member>
+        <member name="P:DotCoolControls.DotCoolCtlGradientSettings.GradientSpan">
+            <summary>
+            The span (size factor or expanse) of the gradient image to be used for drawing the gradient image of the DotCoolControl control. 
+            Certain types of gradients will look more appealing in a control when drawn on a larger or smaller expanse.  Most gradients will look  
+            ideal drawn with the default gradient span associated with the gradient type.
+            </summary>        
+        </member>
+        <member name="P:DotCoolControls.DotCoolCtlGradientSettings.UseDefaultGradientSpan">
+            <summary>
+            Indicates if the default gradient span (size factor or expanse) associated with the selected gradient type used for drawing the gradient
+            image will be used for the control.  Every gradient type has a default gradient span setting that usually will look most ideal for
+            the type of gradient being drawn.  When this flag is set to true, the gradient span setting cannot be modified in the control, as the default 
+            value will be used.
+            </summary>        
+        </member>
+        <member name="P:DotCoolControls.DotCoolCtlGradientSettings.GradientOffset">
+            <summary>
+            The X and Y offset position of the gradient image to be used for drawing the gradient background of the DotCoolControl control.  Adjusting 
+            the offset position of the gradient alters the lighting and color range of the gradient image in the control.
+            </summary>        
+        </member>
+        <member name="T:DotCoolControls.DotCoolCtlTextSettingsList">
+            <summary>
+            A list of a set of all text/caption related control visual settings that are linked to a DotCoolControl.  The DotCoolCtlTextSettingsList will be used
+            in a DotCoolControl class to give the user access to the set of state-specific text/caption visual setting properties that can be organized by the 
+            various control states.  Accessing the text/caption visual setting properties through the TextSettingsList classes will allow the text visual
+            settings to be organized by the various control states for easier management of the various text visual settings that can be associated with the 
+            control.
+            </summary>
+        </member>
+        <member name="M:DotCoolControls.DotCoolCtlTextSettingsList.#ctor(System.Windows.Forms.Control,System.Boolean,DotCoolControls.VisualSettings.VisualSettingProperties{DotCoolControls.VisualSettings.TextVisualSettings})">
+            <summary>
+            Constructor
+            </summary>
+            <param name="control"></param>
+            <param name="blRefreshOnChange"></param>
+            <param name="VisSettings"></param>
+        </member>
+        <member name="P:DotCoolControls.DotCoolCtlTextSettingsList.Item(DotCoolControls.VisualSettings.VisualSettingEnum)">
+            <summary>
+            Gets the visual setting properties of the type of visual setting linked to the class for the state/scenario specified in the function's setting
+            parameter.
+            </summary>
+            <param name="setting"></param>
+            <returns></returns>        
+        </member>
+        <member name="T:DotCoolControls.DotCoolCtlTextSettings">
+            <summary>
+            Contains the control text visual setting propeties for a specific control state associated with a DotCoolControl.  Each control text/caption visual 
+            setting property set will be contained in a DotCoolCtlTextSettingsList class where it can be accessed through its associated control state.
+            </summary>
+        </member>
+        <member name="M:DotCoolControls.DotCoolCtlTextSettings.#ctor(DotCoolControls.DotCoolCtlTextSettingsList,DotCoolControls.VisualSettings.VisualSettingEnum,System.Windows.Forms.Control)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="TextSettingsList"></param>
+            <param name="setting"></param>
+            <param name="control"></param>
+        </member>
+        <member name="M:DotCoolControls.DotCoolCtlTextSettings.ToString">
+            <summary>
+            Overrides the ToString function which will allow an appropriate caption to be displayed in the property grid for the specific type of control 
+            visual setting.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:DotCoolControls.DotCoolCtlTextSettings.EnableText">
+            <summary>
+            Indicates if the text settings of the DotCoolControl will be enabled for the associated control state.
+            </summary>
+        </member>
+        <member name="P:DotCoolControls.DotCoolCtlTextSettings.Font">
+            <summary>
+            Gets or sets the font of the text displayed in the control.
+            </summary>
+        </member>
+        <member name="P:DotCoolControls.DotCoolCtlTextSettings.ForeColor">
+            <summary>
+             Gets or sets the foreground color of the control.
+            </summary>
+        </member>
+        <member name="P:DotCoolControls.DotCoolCtlTextSettings.TextAlign">
+            <summary>
+            Gets or sets the alignment of the caption in the control.
+            </summary>
+        </member>
+        <member name="P:DotCoolControls.DotCoolCtlTextSettings.TextOffset">
+            <summary>
+            Gets or sets the x and y offsets of the caption in the control.
+            </summary>
+        </member>
+        <member name="T:DotCoolControls.DotCoolCtlImageSettingsList">
+            <summary>
+            A list of a set of all image related control visual settings that are linked to a DotCoolControl.  The DotCoolCtlImageSettingsList will be used
+            in a DotCoolControl class to give the user access to the set of state-specific image visual setting properties that can be organized by the 
+            various control states.  Accessing the image visual setting properties through the ImageSettingsList classes will allow the image visual
+            settings to be organized by the various control states for easier management of the various image visual settings that can be associated with the 
+            control.
+            </summary>
+        </member>
+        <member name="M:DotCoolControls.DotCoolCtlImageSettingsList.#ctor(System.Windows.Forms.Control,System.Boolean,DotCoolControls.VisualSettings.VisualSettingProperties{DotCoolControls.VisualSettings.ImageVisualSettings})">
+            <summary>
+            Constructor
+            </summary>
+            <param name="control"></param>
+            <param name="blRefreshOnChange"></param>
+            <param name="VisSettings"></param>
+        </member>
+        <member name="P:DotCoolControls.DotCoolCtlImageSettingsList.Item(DotCoolControls.VisualSettings.VisualSettingEnum)">
+            <summary>
+            Gets the visual setting properties of the type of visual setting linked to the class for the state/scenario specified in the function's setting
+            parameter.
+            </summary>
+            <param name="setting"></param>
+            <returns></returns>        
+        </member>
+        <member name="T:DotCoolControls.DotCoolCtlImageSettings">
+            <summary>
+            Contains the control image visual setting propeties for a specific control state associated with a DotCoolControl.  Each control image visual 
+            setting property set will be contained in a DotCoolCtlImageSettingsList class where it can be accessed through its associated control state.
+            </summary>
+        </member>
+        <member name="M:DotCoolControls.DotCoolCtlImageSettings.#ctor(DotCoolControls.DotCoolCtlImageSettingsList,DotCoolControls.VisualSettings.VisualSettingEnum,System.Windows.Forms.Control)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="ImageSettingsList"></param>
+            <param name="setting"></param>
+            <param name="control"></param>
+        </member>
+        <member name="M:DotCoolControls.DotCoolCtlImageSettings.ToString">
+            <summary>
+            Overrides the ToString function which will allow an appropriate caption to be displayed in the property grid for the specific type of control 
+            visual setting.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:DotCoolControls.DotCoolCtlImageSettings.Image">
+            <summary>
+            Gets or sets the image displayed in the control.
+            </summary>
+        </member>
+        <member name="P:DotCoolControls.DotCoolCtlImageSettings.ImageAlign">
+            <summary>
+            Gets or sets the alignment of the image in the control.
+            </summary>
+        </member>
+        <member name="P:DotCoolControls.DotCoolCtlImageSettings.ImageOffset">
+            <summary>
+            Gets or sets the x and y offset position of the image in the control.
+            </summary>
+        </member>
+        <member name="P:DotCoolControls.DotCoolCtlImageSettings.ImageTransColor">
+            <summary>
+            Gets or sets the color of the image to use for transparency in the control.
+            </summary>
+        </member>
+        <member name="P:DotCoolControls.DotCoolCtlImageSettings.EnableImage">
+            <summary>
+            Indicates if the image settings will be used for the associated control state.
+            </summary>
+        </member>
+        <member name="T:DotCoolControls.DotCoolCtlBorderSettingsList">
+            <summary>
+            A list of a set of all border related control visual settings that are linked to a DotCoolControl.  The DotCoolCtlBorderSettingsList will be used
+            in a DotCoolControl class to give the user access to the set of state-specific border visual setting properties that can be organized by the 
+            various control states.  Accessing the border visual setting properties through the BorderSettingsList classes will allow the border visual
+            settings to be organized by the various control states for easier management of the various border visual settings that can be associated with the 
+            control.
+            </summary>
+        </member>
+        <member name="M:DotCoolControls.DotCoolCtlBorderSettingsList.#ctor(System.Windows.Forms.Control,System.Boolean,DotCoolControls.VisualSettings.VisualSettingProperties{DotCoolControls.VisualSettings.BorderVisualSettings})">
+            <summary>
+            Constructor
+            </summary>
+            <param name="control"></param>
+            <param name="blRefreshOnChange"></param>
+            <param name="VisSettings"></param>
+        </member>
+        <member name="P:DotCoolControls.DotCoolCtlBorderSettingsList.Item(DotCoolControls.VisualSettings.VisualSettingEnum)">
+            <summary>
+            Gets the visual setting properties of the type of visual setting linked to the class for the state/scenario specified in the function's setting
+            parameter.
+            </summary>
+            <param name="setting"></param>
+            <returns></returns>        
+        </member>
+        <member name="T:DotCoolControls.DotCoolCtlBorderSettings">
+            <summary>
+            Contains the control border visual setting propeties for a specific control state associated with a DotCoolControl.  Each control border visual 
+            setting property set will be contained in a DotCoolCtlBorderSettingsList class where it can be accessed through its associated control state.
+            </summary>
+        </member>
+        <member name="M:DotCoolControls.DotCoolCtlBorderSettings.#ctor(DotCoolControls.DotCoolCtlBorderSettingsList,DotCoolControls.VisualSettings.VisualSettingEnum,System.Windows.Forms.Control)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="BorderSettingsList"></param>
+            <param name="setting"></param>
+            <param name="control"></param>
+        </member>
+        <member name="M:DotCoolControls.DotCoolCtlBorderSettings.ToString">
+            <summary>
+            Overrides the ToString function which will allow an appropriate caption to be displayed in the property grid for the specific type of control 
+            visual setting.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:DotCoolControls.DotCoolCtlBorderSettings.BorderShape">
+            <summary>
+            Gets or sets the shape of the control.
+            </summary>
+        </member>
+        <member name="P:DotCoolControls.DotCoolCtlBorderSettings.BorderColor">
+            <summary>
+            Gets or sets the color of the control's border.
+            </summary>
+        </member>
+        <member name="P:DotCoolControls.DotCoolCtlBorderSettings.BorderRadius">
+            <summary>
+            Gets or sets the radius of the border's corners when drawing shapes that have curved corners or edges.
+            </summary>
+        </member>
+        <member name="P:DotCoolControls.DotCoolCtlBorderSettings.BorderSize">
+            <summary>
+            Gets or sets the size of the box portion of the control.
+            </summary>
+        </member>
+        <member name="P:DotCoolControls.DotCoolCtlBorderSettings.BorderOffset">
+            <summary>
+            Gets or sets the X and Y offset position of the box portion of the control.
+            </summary>
+        </member>
+        <member name="P:DotCoolControls.DotCoolCtlBorderSettings.BorderWidth">
+            <summary>
+            Gets or sets the width (thickness) of the control's border.
+            </summary>
+        </member>
+        <member name="T:DotCoolControls.DotCoolCtlBorderColorSettings">
+            <summary>
+            Contains the control border color setting propeties for a specific control state associated with a DotCoolControl.  The control border color 
+            setting property set wil allow user's to access various border color settings from the property designer in an organized manner.  Each 
+            border color property setting will be linked to a border visual setting contained in a DotCoolCtlBorderSetingsList class.
+            </summary>
+        </member>
+        <member name="M:DotCoolControls.DotCoolCtlBorderColorSettings.#ctor(DotCoolControls.DotCoolCtlBorderSettingsList)">
+            <summary>
+            Constructor
+            </summary>
+            <param name="BorderSettingsList"></param>
+        </member>
+        <member name="M:DotCoolControls.DotCoolCtlBorderColorSettings.ToString">
+            <summary>
+            Overrides the ToString function which will allow an appropriate caption to be displayed in the property grid for the specific type of control 
+            visual setting.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:DotCoolControls.DotCoolCtlBorderColorSettings.BorderColor">
+            <summary>
+            Gets or sets the color of the control's border.
+            </summary>
+        </member>
+        <member name="P:DotCoolControls.DotCoolCtlBorderColorSettings.BorderColorDisabled">
+            <summary>
+            Gets or sets the color of the control's border when the control is disabled.
+            </summary>
+        </member>
+        <member name="P:DotCoolControls.DotCoolCtlBorderColorSettings.BorderColorMouseOver">
+            <summary>
+            Gets or sets the color of the control's border when the mouse cursor is positioned over the control.
+            </summary>
+        </member>
+        <member name="P:DotCoolControls.DotCoolCtlBorderColorSettings.BorderColorMouseDown">
+            <summary>
+            Gets or sets the color of the control's border when the mouse button is pushed down on the control.
+            </summary>
+        </member>
+        <member name="T:DotCoolControls.VisualSettings.VisualSettingEnum">
+            <summary>
+            This enumeration contains the various control states/scenarios that can be associated with each visual setting of a DotCoolControl.
+            </summary>
+        </member>
+        <member name="T:DotCoolControls.VisualSettings.VisualSettingProperties`1">
+            <summary>
+            The VisualSettingsProperties class is a templated class that is used for accessing various types of VisualSettings class objects.  Each VisualSetting
+            class will be stored and accessed in the VisualSettingsProperties class for every possible state associated with visual settings in the program.
+            </summary>
+            <typeparam name="TSetting"></typeparam>
+        </member>
+        <member name="F:DotCoolControls.VisualSettings.VisualSettingProperties`1.m_Settings">
+            <summary>
+            A reference to each visual setting for every control state/scenario associated with a DotCoolControl. 
+            </summary>
+        </member>
+        <member name="M:DotCoolControls.VisualSettings.VisualSettingProperties`1.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="P:DotCoolControls.VisualSettings.VisualSettingProperties`1.Item(DotCoolControls.VisualSettings.VisualSettingEnum)">
+            <summary>
+            Gets/Sets the appropriate visual setting stored in the VisualSettingProperties class according to the specified state of the visual setting.  
+            A set of different settings for each specific type of VisualSetting will be stored in the VisualSettingsProperty class that are associated 
+            with the various states that the setting can be accessed.
+            </summary>
+            <param name="setting"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DotCoolControls.VisualSettings.VisualSettingProperties`1.AddSetting(DotCoolControls.VisualSettings.VisualSettingEnum,`0)">
+            <summary>
+            Adds a visual setting to the VisualSettingsProperties class's visual settings collection.  The visual setting will be added and keyed according to
+            the state associated with the properties of that setting.
+            </summary>
+            <param name="setting"></param>
+            <param name="data"></param>
+        </member>
+        <member name="M:DotCoolControls.VisualSettings.VisualSettingProperties`1.AddSettings(System.Collections.Generic.KeyValuePair{DotCoolControls.VisualSettings.VisualSettingEnum,`0}[])">
+            <summary>
+            Adds a group of visual settings to the VisualSettingsProperties class's visual settings collection.  The visual settings will be added and keyed 
+            according to the state associated with the properties of each setting.
+            </summary>
+            <param name="arySettings"></param>        
+        </member>
+        <member name="M:DotCoolControls.VisualSettings.VisualSettingProperties`1.ClearSettings">
+            <summary>
+            Clears all visual settings stored in the VisualSettingsProperties class.
+            </summary>
+        </member>
+        <member name="T:DotCoolControls.VisualSettings.VisualSettingPropGenerator">
+            <summary>
+            This class will be used to generate various type of visual setting properties that will be used in various DotCool controls.  The class can also 
+            initialize each visual setting property with default values.
+            </summary>
+        </member>
+        <member name="M:DotCoolControls.VisualSettings.VisualSettingPropGenerator.CreateGradientVisualSettings(System.Drawing.Color,System.Drawing.Color,DotCoolControls.Tools.CoolGradientType,System.Single,System.Boolean,System.Drawing.Point,System.Boolean)">
+            <summary>
+            Generates a GradientVisualSettings properties class object and initializes each of its associated properties of the gradient visual settings with 
+            default values.  A different visual setting will be stored for each of the various states each property can be accessed in their associated control. 
+            </summary>
+            <param name="DefaultGradColor1"></param>
+            <param name="DefaultGradColor2"></param>
+            <param name="DefaultGradType"></param>
+            <param name="fDefaultGradSpan"></param>
+            <param name="blUseDefaultGradSpan"></param>
+            <param name="ptDefaultGradOffset"></param>
+            <param name="blDrawGradient"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DotCoolControls.VisualSettings.VisualSettingPropGenerator.CreateGradientVisualSettings">
+            <summary>
+            Generates a GradientVisualSettings properties class object and initializes each of its associated properties of the gradient visual settings with 
+            default values.  A different visual setting will be stored for each of the various states each property can be accessed in their associated control. 
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:DotCoolControls.VisualSettings.VisualSettingPropGenerator.CreateBorderVisualSettings(Tiferix.Global.CoolShape,System.Drawing.Color,System.Drawing.Size,System.Drawing.Point,System.Drawing.Point,System.Int32)">
+            <summary>
+            Generates a BorderVisualSettings properties class object and initializes each of its associated properties of the border visual settings with 
+            default values.  A different visual setting will be stored for each of the various states each property can be accessed in their associated control. 
+            </summary>
+            <param name="DefaultBorderShape"></param>
+            <param name="DefaultBorderColor"></param>
+            <param name="DefaultBorderSize"></param>
+            <param name="DefaultBorderRadius"></param>
+            <param name="DefaultBorderOffset"></param>
+            <param name="DefaultBorderWidth"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DotCoolControls.VisualSettings.VisualSettingPropGenerator.CreateBorderVisualSettings">
+            <summary>
+            Generates a BorderVisualSettings properties class object and initializes each of its associated properties of the border visual settings with 
+            default values.  A different visual setting will be stored for each of the various states each property can be accessed in their associated control. 
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:DotCoolControls.VisualSettings.VisualSettingPropGenerator.CreateTextVisualSettings(System.Drawing.Font,System.Drawing.Color,System.Drawing.ContentAlignment,System.Drawing.Point,System.Boolean)">
+            <summary>
+            Generates a TextVisualSettings properties class object and initializes each of its associated properties of the text visual settings with 
+            default values.  A different visual setting will be stored for each of the various states each property can be accessed in their associated control. 
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:DotCoolControls.VisualSettings.VisualSettingPropGenerator.CreateTextVisualSettings">
+            <summary>
+            Generates a TextVisualSettings properties class object and initializes each of its associated properties of the text visual settings with 
+            default values.  A different visual setting will be stored for each of the various states each property can be accessed in their associated control. 
+            </summary>
+        </member>
+        <member name="M:DotCoolControls.VisualSettings.VisualSettingPropGenerator.CreateImageVisualSettings(System.Drawing.Image,System.Drawing.ContentAlignment,System.Drawing.Point,System.Drawing.Color,System.Boolean,Tiferix.Global.CoolImageSizeMode,System.Boolean)">
+            <summary>
+            Generates an ImageVisualSettings properties class object and initializes each of its associated properties of the image visual settings with 
+            default values.  A different visual setting will be stored for each of the various states each property can be accessed in their associated control. 
+            </summary>
+        </member>
+        <member name="M:DotCoolControls.VisualSettings.VisualSettingPropGenerator.CreateImageVisualSettings">
+            <summary>
+            Generates an ImageVisualSettings properties class object and initializes each of its associated properties of the image visual settings with 
+            default values.  A different visual setting will be stored for each of the various states each property can be accessed in their associated control. 
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:DotCoolControls.VisualSettings.GradientVisualSettings">
+            <summary>
+            The GradientVisualSettings class stores a set of properties that contain the most common settings used for gradients in the various
+            DotCool controls.  
+            </summary>
+        </member>
+        <member name="M:DotCoolControls.VisualSettings.GradientVisualSettings.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="T:DotCoolControls.VisualSettings.BorderVisualSettings">
+            <summary>
+            The BorderVisualSettings class stores a set of properties that contain the most common settings used for borders in the various
+            DotCool controls.  
+            </summary>
+        </member>
+        <member name="M:DotCoolControls.VisualSettings.BorderVisualSettings.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="T:DotCoolControls.VisualSettings.TextVisualSettings">
+            <summary>
+            The TextVisualSettings class stores a set of properties that contain the most common settings used for text/caption display in the various
+            DotCool controls.  
+            </summary>
+        </member>
+        <member name="M:DotCoolControls.VisualSettings.TextVisualSettings.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="T:DotCoolControls.VisualSettings.ImageVisualSettings">
+            <summary>
+            The ImageVisualSettings class stores a set of properties that contain the most common settings used for display a variety of images in the 
+            various DotCool controls.  
+            </summary>
+        </member>
+        <member name="M:DotCoolControls.VisualSettings.ImageVisualSettings.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="T:DotCoolControls.DotCoolCheckBase">
+            <summary>
+            DotCoolCheckBase class supplys a prototype to all controls with checking type of capabilities like checkboxes and radio buttons.
+            </summary>
+        </member>
+        <member name="E:DotCoolControls.DotCoolCheckBase.CheckChanged">
+            <summary>
+            The event that is raised when the check property of the check control is changed.
+            </summary>
+        </member>
+        <member name="M:DotCoolControls.DotCoolCheckBase.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="M:DotCoolControls.DotCoolCheckBase.OnPaint(System.Windows.Forms.PaintEventArgs)">
+            <summary>
+            Handles all custom GDI/drawing/painting operations of the DotCoolCheckBase control that extend past the custom painting that is performed 
+            in the base DotCoolControl class.  The paint event of the DotCoolCheckBase class will including the drawing of the control's gradient check symbol.
+            </summary>
+            <param name="pevent"></param>
+        </member>
+        <member name="M:DotCoolControls.DotCoolCheckBase.DrawCheckSymbol(System.Drawing.Graphics)">
+            <summary>
+            Draws the appropriate gradient check symbol in the box portion of the check control when the control is checked, according to the current
+            state of the control.
+            </summary>
+        </member>
+        <member name="M:DotCoolControls.DotCoolCheckBase.DrawControlImage(System.Drawing.Graphics)">
+            <summary>
+            Draws the check symbol image for the control in the box portion of the check control.  The image will be drawn and rendered onto the 
+            control based on the various check symbol image settings that are set in the control.  
+            NOTE: When an image check symbol is used, it will override the gradient check symbol settings and be displayed instead of the gradient 
+            check symbol.
+            </summary>
+            <param name="gCtl"></param>
+        </member>
+        <member name="P:DotCoolControls.DotCoolCheckBase.BorderSize">
+            <summary>
+            Gets or sets the size of the box portion of the control.
+            </summary>
+        </member>
+        <member name="P:DotCoolControls.DotCoolCheckBase.BorderOffset">
+            <summary>
+            Gets or sets the X and Y offset position of the box portion of the control.
+            </summary>
+        </member>
+        <member name="P:DotCoolControls.DotCoolCheckBase.BorderWidth">
+            <summary>
+            Gets or sets the width (thickness) of the control's border.
+            </summary>
+        </member>
+        <member name="P:DotCoolControls.DotCoolCheckBase.BorderWidthSettings">
+            <summary>
+            Gets or sets the width (thickness) of the control's border for each associated control state.  PROPERTY IS READ ONLY.. Only one border 
+            width setting will be used for check controls.
+            </summary>
+        </member>
+        <member name="M:DotCoolControls.DotCoolCheckBase.GetCheckBorderColor(System.Func{System.Nullable{System.Drawing.Color}})">
+            <summary>
+            Gets the appropriate border color of the check symbol based on the control's current state.
+            </summary>
+            <returns></returns>
+            <param name="delStateCheckFunc">Delegate to a function containing additional logic to add to the function.  The function will be usually 
+            passed from children classes to the base DotCoolControl class to embed additional criteria to a visual setting state checking function.</param>
+        </member>
+        <member name="M:DotCoolControls.DotCoolCheckBase.GetCheckBorderColor">
+            <summary>
+            Gets the appropriate border color of the check symbol based on the control's current state.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:DotCoolControls.DotCoolCheckBase.CheckShape">
+            <summary>
+            Gets or sets the shape of the check symbol.
+            </summary>
+        </member>
+        <member name="M:DotCoolControls.DotCoolCheckBase.GetCheckBorderColorSettings">
+            <summary>
+            Gets or sets the color of the gradient check symbol's border for each associated control state.  The derived check controls of the DotCoolCheckBase 
+            class will access this function to implement a BorderColorSettings property that can be accessible to the user.
+            </summary>
+        </member>
+        <member name="P:DotCoolControls.DotCoolCheckBase.CheckSize">
+            <summary>
+            Gets or sets the size of the check symbol displayed in the box portion of the control.
+            </summary>
+        </member>
+        <member name="P:DotCoolControls.DotCoolCheckBase.CheckRadius">
+            <summary>
+            Gets or sets the radius of the check symbol border's corners when drawing shapes that have curved corners or edges.
+            </summary>
+        </member>
+        <member name="P:DotCoolControls.DotCoolCheckBase.CheckOffset">
+            <summary>
+            Gets or sets the x and y offset position of where the check symbol is displayed in relative to the position of the top-left corner of the box
+            portion of the control.
+            </summary>
+        </member>
+        <member name="P:DotCoolControls.DotCoolCheckBase.CheckBorderWidth">
+            <summary>
+            Gets or sets the width (thickness) of the check symol's border.
+            </summary>
+        </member>
+        <member name="M:DotCoolControls.DotCoolCheckBase.GetCheckGradientColor(System.Int32,System.Func{System.Nullable{System.Drawing.Color}})">
+            <summary>
+            Gets the appropriate gradient start or ending color of the check symbol based on the control's current state.
+            </summary>
+            <param name="iColorIndex"></param>
+            <param name="delStateCheckFunc">Delegate to a function containing additional logic to add to the function.  The function will be usually 
+            passed from children classes to the base DotCoolControl class to embed additional criteria to a visual setting state checking function.</param>
+            <returns></returns>        
+        </member>
+        <member name="M:DotCoolControls.DotCoolCheckBase.GetCheckGradientColor(System.Int32)">
+            <summary>
+            Gets the appropriate gradient start or ending color of the check symbol based on the control's current state.
+            </summary>
+            <param name="iColorIndex"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DotCoolControls.DotCoolCheckBase.GetCheckGradientType(System.Func{System.Nullable{DotCoolControls.Tools.CoolGradientType}})">
+            <summary>
+            Gets the appropriate gradient type of the check symbol based on the control's current state.
+            </summary>
+            <returns></returns>
+            <param name="delStateCheckFunc">Delegate to a function containing additional logic to add to the function.  The function will be usually 
+            passed from children classes to the base DotCoolControl class to embed additional criteria to a visual setting state checking function.</param>
+            <returns></returns>        
+        </member>
+        <member name="M:DotCoolControls.DotCoolCheckBase.GetCheckGradientType">
+            <summary>
+            Gets the appropriate gradient type of the check symbol based on the control's current state.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:DotCoolControls.DotCoolCheckBase.GetCheckGradientSpan(System.Func{System.Single})">
+            <summary>
+            Gets the appropriate gradient span value of the check symbol based on the control's current state.
+            </summary>
+            <returns></returns>
+            <param name="delStateCheckFunc">Delegate to a function containing additional logic to add to the function.  The function will be usually 
+            passed from children classes to the base DotCoolControl class to embed additional criteria to a visual setting state checking function.</param>
+            <returns></returns>        
+        </member>
+        <member name="M:DotCoolControls.DotCoolCheckBase.GetCheckGradientSpan">
+            <summary>
+            Gets the appropriate gradient span value of the check symbol based on the control's current state.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:DotCoolControls.DotCoolCheckBase.GetCheckGradientOffset(System.Func{System.Nullable{System.Drawing.Point}})">
+            <summary>
+            Gets the appropriate background gradient X and Y offset position of the check symbol based on the control's current state.
+            </summary>
+            <param name="delStateCheckFunc">Delegate to a function containing additional logic to add to the function.  The function will be usually 
+            passed from children classes to the base DotCoolControl class to embed additional criteria to a visual setting state checking function.</param>
+            <returns></returns>        
+        </member>
+        <member name="M:DotCoolControls.DotCoolCheckBase.GetCheckGradientOffset">
+            <summary>
+            Gets the appropriate background gradient X and Y offset position of the check symbol based on the control's current state.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:DotCoolControls.DotCoolCheckBase.GetCheckGradientSettings(DotCoolControls.VisualSettings.VisualSettingEnum)">
+            <summary>
+            Gets the set of gradient settings of the check symbol portion of the control for the control state specified in the function's setting parameter.
+            </summary>
+            <param name="setting"></param>
+            <returns></returns>
+        </member>
+        <member name="P:DotCoolControls.DotCoolCheckBase.CheckGradientSettings">
+            <summary>
+            Gradient settings of the check symbol portion of the control when the control is in its normal state.
+            </summary>
+        </member>
+        <member name="P:DotCoolControls.DotCoolCheckBase.CheckGradientSettingsDisabled">
+            <summary>
+            Gradient settings of the check symbol portion of the control when the control is in its disabled state.
+            </summary>
+        </member>
+        <member name="P:DotCoolControls.DotCoolCheckBase.CheckGradientSettingsMouseOver">
+            <summary>
+            Gradient settings of the check symbol portion of the control when the mouse cursor is over the control.
+            </summary>
+        </member>
+        <member name="P:DotCoolControls.DotCoolCheckBase.Checked">
+            <summary>
+            Gets/Sets a value indicating if the check control is checked or unchecked.
+            </summary>
+        </member>
+        <member name="P:DotCoolControls.DotCoolCheckBase.SelectBehavior">
+            <summary>
+            Indicates if the check control is selected by clicking specifically on the box portion of the control or any part of the control.
+            </summary>
+        </member>
+        <member name="M:DotCoolControls.DotCoolCheckBase.OnCheckChanged(System.EventArgs)">
+            <summary>
+            Raises the CheckChanged event of the DotCoolCheckBase derived control.
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:DotCoolControls.DotCoolCheckBase.CloneBase(DotCoolControls.DotCoolCheckBase)">
+            <summary>
+            Copies all of the properties and settings that are specific to the base DotCoolCheckBase class from one derived DotCoolCheckBase control to
+            another derived DotCoolCheckBase control.
+            </summary>
+            <param name="chbaseClone">The DotCoolCheckBase dervied control that will be cloned from the current DotCoolCheckBase control.</param>
+        </member>
+        <member name="T:DotCoolControls.DotCoolCheckBase.DotCoolCheckBaseBorderColorSettings">
+            <summary>
+            Contains the control border visual setting propeties for a specific control state associated with a check control.  Each control border visual 
+            setting property set will be contained in a DotCoolCtlBorderSettingsList class where it can be accessed through its associated control state.
+            </summary>
+        </member>
+        <member name="M:DotCoolControls.DotCoolCheckBase.DotCoolCheckBaseBorderColorSettings.#ctor(DotCoolControls.DotCoolCtlBorderSettingsList)">
+            <summary>
+            Constructor.
+            </summary>
+            <param name="BorderSettingsList"></param>
+        </member>
+        <member name="P:DotCoolControls.DotCoolCheckBase.DotCoolCheckBaseBorderColorSettings.BorderColorMouseDown">
+            <summary>
+            Gets or sets the color of the control's border when the mouse button is pushed down on the control.  Control state NOT USED for check controls.
+            </summary>
+        </member>
+        <member name="T:DotCoolControls.DotCoolControl">
+            <summary>
+            The DotCoolControl class provides the prototype for all controls in the DotCoolControls library.  All Dot Cool controls will be derived from this 
+            abstract class.
+            </summary>
+        </member>
+        <member name="E:DotCoolControls.DotCoolControl.DoubleClick">
+            <summary>
+            Occurs when the control is double-clicked.
+            </summary>
+        </member>
+        <member name="F:DotCoolControls.DotCoolControl.m_GradBackSettingsList">
+            <summary>
+            Contains the various gradient settings for the background of the DotCoolControl class.
+            </summary>
+        </member>
+        <member name="F:DotCoolControls.DotCoolControl.m_BorderSettingsList">
+            <summary>
+            Contains the various border settings of the DotCoolControl class.
+            </summary>
+        </member>
+        <member name="F:DotCoolControls.DotCoolControl.m_BorderColorSettings">
+            <summary>
+            Contains a reference to the border color settings class that will allow the user to view and modify the control's border color settings for 
+            each control state/scenario using an expandable property grid.
+            </summary>
+        </member>
+        <member name="F:DotCoolControls.DotCoolControl.m_BorderWidthSettings">
+            <summary>
+            Contains a reference to the border width settings class that will allow the user to view and modify the control's border width settings for 
+            each control state/scenario using an expandable property grid.
+            </summary>
+        </member>
+        <member name="F:DotCoolControls.DotCoolControl.m_TextSettingsList">
+            <summary>
+            Contains the various text and font settings for the caption displayed in the DotCoolControl class.
+            </summary>
+        </member>
+        <member name="F:DotCoolControls.DotCoolControl.m_ImageSettingsList">
+            <summary>
+            Contains the various settings for the images displayed in the DotCoolControl class.
+            </summary>
+        </member>
+        <member name="M:DotCoolControls.DotCoolControl.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="M:DotCoolControls.DotCoolControl.OnVisibleChanged(System.EventArgs)">
+            <summary>
+            Raises the Control.OnVisibleChanged event.
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:DotCoolControls.DotCoolControl.Dispose(System.Boolean)">
+            <summary>
+            Releases the unmanaged resources used by the System.Windows.Forms.Control and its child controls and optionally releases 
+            the managed resources.
+            </summary>
+            <param name="disposing">True to release both managed and unmanaged resources; false to release only unmanaged
+            resources.</param>
+        </member>
+        <member name="M:DotCoolControls.DotCoolControl.WndProc(System.Windows.Forms.Message@)">
+            <summary>
+            Processes Windows messages.
+            </summary>
+            <param name="m"></param>
+        </member>
+        <member name="M:DotCoolControls.DotCoolControl.ProcessMnemonic(System.Char)">
+            <summary>
+            Processes a mnemonic character.
+            </summary>
+            <param name="inputChar"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DotCoolControls.DotCoolControl.OnPaint(System.Windows.Forms.PaintEventArgs)">
+            <summary>
+            Handles all custom GDI/drawing/painting operations of the DotCoolControl, including the drawing of the control's gradients, text and images.
+            </summary>
+            <param name="pevent"></param>
+        </member>
+        <member name="M:DotCoolControls.DotCoolControl.DrawBackGradientImage(System.Drawing.Graphics)">
+            <summary>
+            Draws the background gradient image in the control based on the various gradient settings that are set for the control.  All drawing will 
+            be performed in memory-based device context before rendering onto the control to allow for flicker-free drawing.
+            </summary>
+        </member>
+        <member name="M:DotCoolControls.DotCoolControl.DrawControlText(System.Drawing.Graphics)">
+            <summary>
+            Draws the text or caption set for the control over the background of the control.  The text will be drawn and rendered onto the control based
+            on the various text settings that are set in the control.
+            </summary>
+            <param name="gCtl"></param>
+        </member>
+        <member name="M:DotCoolControls.DotCoolControl.DrawControlImage(System.Drawing.Graphics)">
+            <summary>
+            Draws the image for the control over the background of the control.  The image will be drawn and rendered onto the control based
+            on the various image settings that are set in the control.
+            </summary>
+            <param name="gCtl"></param>
+        </member>
+        <member name="M:DotCoolControls.DotCoolControl.OnMouseEnter(System.EventArgs)">
+            <summary>
+            If the control's selection behavior is set to Control, the <seealso cref="E:System.Windows.Forms.Control.MouseEnter"/> event will be raised when it enters 
+            the physical area of the control (not border).  In the case the selection behavior is set to Border, the MouseEnter event will only be raised when 
+            the mouse cursor is moved within the boundaries of the control's borders.  In this scenario, the MouseMove event will be used to detect when
+            the mouse has entered the boundaries of the control and will then raise the MouseEnter event.
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:DotCoolControls.DotCoolControl.OnMouseLeave(System.EventArgs)">
+            <summary>
+            If the control's selection behavior is set to Control, then raises the MouseLeave event.  In the case the selection behavior is set to Border, the 
+            MouseLeave event will not be raised by the control unless the mouse was previously moved within the boundaries of the control's borders.
+            If it was detected that the mouse has moved within the boundaries of the control's border, then the MouseLeave event will be raised and the 
+            MouseOver flag will be set to false.
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:DotCoolControls.DotCoolControl.OnMouseMove(System.Windows.Forms.MouseEventArgs)">
+            <summary>
+            If the control's selection behavior is set to Control, then raises the MouseMove event.  In the case the control's selection behavior is set to 
+            Border, the MouseMove event will be used to detect if the mouse cursor has been moved within the boundaries of the control's border.  If the 
+            mouse cursor is detected within the border of the control, then the MouseMove event will be raised.  As well, the MouseEnter event will be 
+            raised from the MouseMove event when the mouse cursor first enters the boundaries of the control's border.
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:DotCoolControls.DotCoolControl.OnMouseDown(System.Windows.Forms.MouseEventArgs)">
+            <summary>
+            If the control's selection behavior is set to Control, then raises the MouseDown event.  In the case the selection behavior is set to Border, 
+            the MouseDown event will be raised only when the mouse button is pushed down while the mouse cursor is located within the boundaries 
+            of the control's border.
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:DotCoolControls.DotCoolControl.OnMouseUp(System.Windows.Forms.MouseEventArgs)">
+            <summary>
+            The <seealso cref="E:System.Windows.Forms.Control.MouseUp"/> event will be raised when the mouse button is released after being pushed down while the mouse cursor was located within the 
+            boundaries of the control's border.
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:DotCoolControls.DotCoolControl.OnClick(System.EventArgs)">
+            <summary>
+            The <seealso cref="E:System.Windows.Forms.Control.Click"/>  Click event will be raised when the mouse button is clicked within the boundaries of the control's border.
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:DotCoolControls.DotCoolControl.OnDoubleClick(System.EventArgs)">
+            <summary>
+            The <seealso cref="E:System.Windows.Forms.Control.DoubleClick"></seealso> event will be raised when the mouse button is double-clicked within the boundaries of the control's border.
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:DotCoolControls.DotCoolControl.OnGotFocus(System.EventArgs)">
+            <summary>
+            Raises the <seealso cref="E:System.Windows.Forms.Control.GotFocus"/> event of the control.
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:DotCoolControls.DotCoolControl.OnLostFocus(System.EventArgs)">
+            <summary>
+            Raises the <seealso cref="E:System.Windows.Forms.Control.LostFocus"/> event of the control.
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:DotCoolControls.DotCoolControl.GetBorderColor">
+            <summary>
+            Gets the appropriate border color of the control based on the control's current state.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:DotCoolControls.DotCoolControl.GetBorderWidth">
+            <summary>
+            Retrieves the appropriate border width of the control based on the control's current state.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:DotCoolControls.DotCoolControl.BorderShape">
+            <summary>
+            Gets or sets the shape of the control.
+            </summary>
+        </member>
+        <member name="P:DotCoolControls.DotCoolControl.BorderColorSettings">
+            <summary>
+            Gets or sets the color of the control's border for each associated control state.
+            </summary>
+        </member>
+        <member name="M:DotCoolControls.DotCoolControl.GetBorderSize">
+            <summary>
+            Gets the size of the control's border boundaries.  
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:DotCoolControls.DotCoolControl.SetBorderSize(System.Drawing.Size)">
+            <summary>
+            Sets the size of the control's border boundaries.  This method will be used by inherited classes to manipulate the size of the
+            of the control's borders, whether internally or directly by the user via properties.
+            </summary>
+        </member>
+        <member name="P:DotCoolControls.DotCoolControl.BorderRadius">
+            <summary>
+            Gets or sets the radius of the border's corners when drawing shapes that have curved corners or edges.
+            </summary>
+        </member>
+        <member name="M:DotCoolControls.DotCoolControl.SetBorderOffset(System.Drawing.Point)">
+            <summary>
+            Sets the X and Y offset positions of the control's border boundaries.  This method will be used by inherited classes to manipulate the position 
+            of the control's borders, whether internally or directly by the user via properties.
+            </summary>
+        </member>
+        <member name="M:DotCoolControls.DotCoolControl.GetBorderOffset">
+            <summary>
+            Gets the X and Y offset positions of the control's border boundaries.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:DotCoolControls.DotCoolControl.ContainsPoint(System.Drawing.Point)">
+            <summary>
+            The function checks to see if the point passed in the point parameter is contained within the array of points that compose the border region 
+            of the control.  If the array of points contained the specified point specified, then the function will return true, else it returns false.        
+            </summary>        
+            <param name="point"></param>
+            <returns></returns>
+        </member>
+        <member name="P:DotCoolControls.DotCoolControl.BorderWidthSettings">
+            <summary>
+            Gets or sets the width (thickness) of the control's border for each associated control state.
+            </summary>
+        </member>
+        <member name="M:DotCoolControls.DotCoolControl.GetBackGradientColor(System.Int32)">
+            <summary>
+            Gets the appropriate background gradient start or ending color of the control based on the control's current state.
+            </summary>
+            <param name="iColorIndex">1 = Gradient Starting Color, 2 = Gradient Ending Color</param>
+            <returns></returns>
+        </member>
+        <member name="M:DotCoolControls.DotCoolControl.GetBackGradientType">
+            <summary>
+            Gets the appropriate background gradient type of the control based on the control's current state.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:DotCoolControls.DotCoolControl.GetBackGradientSpan">
+            <summary>
+            Gets the appropriate background gradient span value of the control based on the control's current state.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:DotCoolControls.DotCoolControl.GetBackGradientOffset">
+            <summary>
+            Gets the appropriate background gradient X and Y offset position of the control based on the control's current state.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:DotCoolControls.DotCoolControl.GetBackGradientSettings(DotCoolControls.VisualSettings.VisualSettingEnum)">
+            <summary>
+            Gets the set of gradient background control settings for the control state specified in the function's setting parameter.
+            </summary>
+            <param name="setting"></param>
+            <returns></returns>
+        </member>
+        <member name="P:DotCoolControls.DotCoolControl.BackGradientSettings">
+            <summary>
+            Background gradient settings of the DotCoolControl when the control is in its normal state.
+            </summary>
+        </member>
+        <member name="P:DotCoolControls.DotCoolControl.BackGradientSettingsDisabled">
+            <summary>
+            Background gradient settings of the DotCoolControl when the control is in its disabled state.
+            </summary>
+        </member>
+        <member name="P:DotCoolControls.DotCoolControl.BackGradientSettingsMouseOver">
+            <summary>
+            Background gradient settings of the DotCoolControl when the mouse cursor is over the control.
+            </summary>
+        </member>
+        <member name="M:DotCoolControls.DotCoolControl.GetBackGradientSettingsMouseDown">
+            <summary>
+            Gets the background gradient settings of the DotCoolControl when the mouse button is pushed down on the control.
+            Certain derived controls will not have a background gradient settings for the MouseDown event and these settings will not be
+            displayed in those controls, therefore every derived class will have to implement its own BackGradientSettingsMouseDown property if it 
+            wants to be able to modify and access the set of Mouse Down state properties for the BackGradientSettings.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:DotCoolControls.DotCoolControl.Text">
+            <summary>
+            Gets or sets the text to be displayed in the control.
+            </summary>
+        </member>
+        <member name="M:DotCoolControls.DotCoolControl.GetTextAlign">
+            <summary>
+            Gets the appropriate text alignment setting of the displayed text in the control based on the control's current state.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:DotCoolControls.DotCoolControl.GetTextOffset">
+            <summary>
+            Gets the appropriate X and Y text offset setting of the displayed text in the control based on the control's current state.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:DotCoolControls.DotCoolControl.GetFont">
+            <summary>
+            Gets the appropriate font setting of the displayed text in the control based on the control's current state.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:DotCoolControls.DotCoolControl.GetForeColor">
+            <summary>
+            Gets the appropriate fore color setting of the displayed text in the control based on the control's current state.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:DotCoolControls.DotCoolControl.GetTextSettings(DotCoolControls.VisualSettings.VisualSettingEnum)">
+            <summary>
+            Gets the set of control text/caption settings for the control state specified in the function's setting parameter.
+            </summary>
+            <param name="setting"></param>
+            <returns></returns>
+        </member>
+        <member name="P:DotCoolControls.DotCoolControl.TextSettings">
+            <summary>
+            Text/Caption display settings of the DotCoolControl when the control is in its normal state.
+            </summary>
+        </member>
+        <member name="P:DotCoolControls.DotCoolControl.TextSettingsDisabled">
+            <summary>
+            Text/Caption display settings of the DotCoolControl when the control is in its disabled state.
+            </summary>
+        </member>
+        <member name="P:DotCoolControls.DotCoolControl.TextSettingsMouseOver">
+            <summary>
+            Text/Caption display settings of the DotCoolControl when the mouse cursor is over the control.
+            </summary>
+        </member>
+        <member name="M:DotCoolControls.DotCoolControl.GetTextSettingsMouseDown">
+            <summary>
+            Gets the Text/Caption display settings of the DotCoolControl when the mouse button is pushed down on the control.
+            Certain derived controls will not have a background gradient settings for the MouseDown event and these settings will not be
+            displayed in those controls, therefore every derived class will have to implement its own TextSettingsMouseDown property if it 
+            wants to be able to modify and access the set of Mouse Down state properties for the TextSettings.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:DotCoolControls.DotCoolControl.GetImage(System.Func{System.Drawing.Image})">
+            <summary>
+            Gets the appropriate image that will be displayed in the control based on the control's current state.
+            </summary>
+            <returns></returns>
+            <param name="delStateCheckFunc">Delegate to a function containing additional logic to add to the function.  The function will be usually 
+            passed from children classes to the base DotCoolControl class to embed additional criteria to a visual setting state checking function.</param>
+        </member>
+        <member name="M:DotCoolControls.DotCoolControl.GetImage">
+            <summary>
+            Gets the appropriate image that will be displayed in the control based on the control's current state.
+            </summary>
+            <returns></returns>        
+        </member>
+        <member name="M:DotCoolControls.DotCoolControl.GetImageAlign(System.Func{System.Nullable{System.Drawing.ContentAlignment}})">
+            <summary>
+            Gets the appropriate image alignment of the image displayed in the control based on the control's current state.
+            </summary>
+            <returns></returns>
+            <param name="delStateCheckFunc">Delegate to a function containing additional logic to add to the function.  The function will be usually 
+            passed from children classes to the base DotCoolControl class to embed additional criteria to a visual setting state checking function.</param>
+        </member>
+        <member name="M:DotCoolControls.DotCoolControl.GetImageAlign">
+            <summary>
+            Gets the appropriate image alignment of the image displayed in the control based on the control's current state.
+            </summary>
+            <returns></returns>        
+        </member>
+        <member name="M:DotCoolControls.DotCoolControl.GetImageOffset(System.Func{System.Nullable{System.Drawing.Point}})">
+            <summary>
+            Gets the appropriate X and Y offset positions of the image displayed in the control based on the control's current state.
+            </summary>
+            <returns></returns>
+            <param name="delStateCheckFunc">Delegate to a function containing additional logic to add to the function.  The function will be usually 
+            passed from children classes to the base DotCoolControl class to embed additional criteria to a visual setting state checking function.</param>
+        </member>
+        <member name="M:DotCoolControls.DotCoolControl.GetImageOffset">
+            <summary>
+            Gets the appropriate X and Y offset positions of the image displayed in the control based on the control's current state.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:DotCoolControls.DotCoolControl.GetImageTransColor(System.Func{System.Nullable{System.Drawing.Color}})">
+            <summary>
+            Gets the appropriate transparent color of the image displayed in the control based on the control's current state.
+            </summary>
+            <returns></returns>
+            <param name="delStateCheckFunc">Delegate to a function containing additional logic to add to the function.  The function will be usually 
+            passed from children classes to the base DotCoolControl class to embed additional criteria to a visual setting state checking function.</param>
+        </member>
+        <member name="M:DotCoolControls.DotCoolControl.GetImageTransColor">
+            <summary>
+            Gets the appropriate transparent color of the image displayed in the control based on the control's current state.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:DotCoolControls.DotCoolControl.GetImageSettings(DotCoolControls.VisualSettings.VisualSettingEnum)">
+            <summary>
+            Gets the set of image display settings for the control state specified in the function's setting parameter.
+            </summary>
+            <param name="setting"></param>
+            <returns></returns>
+        </member>
+        <member name="P:DotCoolControls.DotCoolControl.ImageSettings">
+            <summary>
+            Image display settings of the DotCoolControl when the control is in its normal state.
+            </summary>
+        </member>
+        <member name="P:DotCoolControls.DotCoolControl.ImageSettingsDisabled">
+            <summary>
+            Image display settings of the DotCoolControl when the control is in its disabled state.
+            </summary>
+        </member>
+        <member name="P:DotCoolControls.DotCoolControl.ImageSettingsMouseOver">
+            <summary>
+            Image display settings of the DotCoolControl when the mouse cursor is over the control.
+            </summary>
+        </member>
+        <member name="M:DotCoolControls.DotCoolControl.GetImageSettingsMouseDown">
+            <summary>
+            Gets the image display settings of the DotCoolControl when the mouse button is pushed down on the control.
+            Certain derived controls will not have image settings for the MouseDown event and these settings will not be
+            displayed in those controls. Therefore, every derived class will have to implement its own ImageSettingsMouseDown property if it 
+            wants to be able to modify and access the set of Mouse Down state properties for the ImageSettings.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:DotCoolControls.DotCoolControl.FocusOnClick">
+            <summary>
+            Indicates if the button control will receive the focus after it is clicked by the user.
+            </summary>
+        </member>
+        <member name="M:DotCoolControls.DotCoolControl.PerformClick">
+            <summary>
+            Simulates a user clicking on the control.
+            </summary>
+        </member>
+        <member name="M:DotCoolControls.DotCoolControl.GetDrawFocusRect">
+            <summary>
+            Gets a value that specifies where in the control the focus rectangle will be drawn when the control has focus.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:DotCoolControls.DotCoolControl.SetDrawFocusRect(DotCoolControls.DotCoolControl.FocusRectEnum)">
+            <summary>
+            Sets a value that specifies where in the control the focus rectangle will be drawn when the control has focus.  Inherited controls will use 
+            this value to either modify the draw focus rectangle settings internally or to allow the user to directly modify the settings through properties.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:DotCoolControls.DotCoolControl.GetSelectBehavior">
+            <summary>
+            Gets a value that indicates if the check control is selected by clicking specifically within the border boundaries of the control or any part of
+            the control.
+            </summary>        
+            <returns></returns>
+        </member>
+        <member name="M:DotCoolControls.DotCoolControl.SetSelectBehavior(DotCoolControls.DotCoolControl.ControlSelectBehavior)">
+            <summary>
+            Sets a value that indicates if the control is selected by clicking specifically within the border boundaries of the control or any part of
+            the control.  Inherited controls will use this value to either modify the control selection behavior settings internally or to allow the user
+            to directly modify the settings through properties.
+            </summary>
+            <param name="ctlSelBehavior"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DotCoolControls.DotCoolControl.KeyHook_KeyPressed(System.Object,Tiferix.Global.KeyPressedEventArgs)">
+            <summary>
+            Handles all key events that are registered at the form level and need to be processed by the DotCoolControl.  A key event hook of the form 
+            containing the DotCoolControl will be used for various operations like handling hot keys and accelerators and performing the appropriate 
+            actions in response to them.
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="P:DotCoolControls.DotCoolControl.HotKey">
+            <summary>
+            The key value that will be used as the hot key of the control.
+            </summary>
+        </member>
+        <member name="M:DotCoolControls.DotCoolControl.UpdateHotKey">
+            <summary>
+            Registers a new hot key using the current hot key settings in the control.  Any previous hot keys will be disabled and deleted from memory.
+            </summary>
+        </member>
+        <member name="M:DotCoolControls.DotCoolControl.CloneBase(DotCoolControls.DotCoolControl)">
+            <summary>
+            Copies all of the properties and settings that are specific to the base DotCoolControl class from one derived DotCoolControl control to another 
+            derived DotCoolControl control.
+            </summary>
+            <param name="ctlClone">The DotCoolControl dervied control that will be cloned from the current DotCoolControl.</param>
+        </member>
+        <member name="T:DotCoolControls.DotCoolControl.DotCoolCtlBorderWidthSettings">
+            <summary>
+            The class will be used to view and modify the state-specific border width settings of the DotCoolControl from the control's property grid
+            in the designer as well as at run-time.
+            </summary>
+        </member>
+        <member name="M:DotCoolControls.DotCoolControl.DotCoolCtlBorderWidthSettings.#ctor(DotCoolControls.DotCoolCtlBorderSettingsList)">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="M:DotCoolControls.DotCoolControl.DotCoolCtlBorderWidthSettings.ToString">
+            <summary>
+            Overrides the ToString function which will allow an appropriate caption to be displayed in the property grid for the specific type of control 
+            visual setting.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:DotCoolControls.DotCoolControl.DotCoolCtlBorderWidthSettings.BorderWidth">
+            <summary>
+            Gets or sets the width (thickness) of the control's border.
+            </summary>
+        </member>
+        <member name="P:DotCoolControls.DotCoolControl.DotCoolCtlBorderWidthSettings.BorderWidthMouseDown">
+            <summary>
+            Gets or sets the width (thickness) of the control's border when the mouse button is pushed down on the control.
+            </summary>
+        </member>
+    </members>
+</doc>
